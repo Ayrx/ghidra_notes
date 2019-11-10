@@ -14,6 +14,16 @@ File f = dataFile.getFile(true)
 
 Reference: https://github.com/NationalSecurityAgency/ghidra/issues/976
 
+## Iterate over all functions in a program
+
+```java
+Function function = this.getFirstFunction();
+while (function != null) {
+    // do stuff
+    function = this.getFunctionAfter(function);
+}
+```
+
 ## Modifying function signature
 
 ```java
