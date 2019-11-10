@@ -24,6 +24,18 @@ while (function != null) {
 }
 ```
 
+## Get references to and from a function
+
+```java
+Function f = ...
+
+// Get references to a function
+Set<Function> callers = f.getCallingFunctions(this.monitor)
+
+// Get references from a function
+Set<Function> callees = f.getCalledFunctions(this.monitor)
+```
+
 ## Modifying function signature
 
 ```java
